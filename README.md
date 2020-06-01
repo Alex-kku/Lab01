@@ -260,7 +260,6 @@ $ find . type -f -exec du -h {} +|sort -rh | head -n 10
 8,1M ./libboost_math_tr1f.a
 7,8M ./libboost_math_tr1.a
 7,7M ./libboost_math_tr1l.a
-
 ```
 ```sh
 Copyright (c) 2015-2020 The ISC Authors
