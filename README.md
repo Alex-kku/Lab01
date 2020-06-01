@@ -6,24 +6,24 @@
 
 ## Tasks
 
-- [ ] 1. Ознакомиться со ссылками учебного материала
-- [ ] 2. Выполнить инструкцию учебного материала
-- [ ] 3. Составить отчет и отправить ссылку личным сообщением в **Slack**
+- [x] 1. Ознакомиться со ссылками учебного материала
+- [x] 2. Выполнить инструкцию учебного материала
+- [x] 3. Составить отчет и отправить ссылку личным сообщением в **Slack**
 
 ## Tutorial
 
 ```bash
-$ export GITHUB_USERNAME=<имя_пользователя>
-$ export GIST_TOKEN=<сохраненный_токен>
-$ alias edit=<nano|vi|vim|subl>
+$ export GITHUB_USERNAME=Alex-kku
+$ export GIST_TOKEN=4c55c871704490261a18d0f60946dff1b514b132
+$ alias edit=subl
 ```
 
 ```sh
 $ mkdir -p ${GITHUB_USERNAME}/workspace
-$ cd ${GITHUB_USERNAME}/workspace
-$ pwd
+$ cd ${GITHUB_USERNAME}/workspace 
+$ pwd /home/baha/Alex-kku/workspace
 $ cd ..
-$ pwd
+$ pwd /home/baha/Alex-kku
 ```
 
 ```sh
@@ -35,7 +35,18 @@ $ cd workspace
 
 ```sh
 # Debian
-$ wget https://nodejs.org/dist/v6.11.5/node-v6.11.5-linux-x64.tar.xz
+$ wget https://nodejs.org/dist/v6.11.5/node-v6.11.5-linux-x64.tar.xz 
+18:43:07--  https://nodejs.org/dist/v6.11.5/node-v6.11.5-linux-x64.tar.xz
+Распознаётся nodejs.org (nodejs.org)… 104.20.23.46, 104.20.22.46, 2606:4700:10::6814:162e, ...
+Подключение к nodejs.org (nodejs.org)|104.20.23.46|:443... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа… 200 OK
+Длина: 9356460 (8,9M) [application/x-xz]
+Сохранение в: «node-v6.11.5-linux-x64.tar.xz»
+
+node-v6.11.5-linux-x64.tar 100%[=====================================>]   8,92M  5,28MB/s    за 1,7s    
+
+2020-06-01 18:43:09 (5,28 MB/s) - «node-v6.11.5-linux-x64.tar.xz» сохранён [9356460/9356460]
+
 $ tar -xf node-v6.11.5-linux-x64.tar.xz
 $ rm -rf node-v6.11.5-linux-x64.tar.xz
 $ mv node-v6.11.5-linux-x64 node
@@ -44,8 +55,10 @@ $ mv node-v6.11.5-linux-x64 node
 ```sh
 $ ls node/bin
 $ echo ${PATH}
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 $ export PATH=${PATH}:`pwd`/node/bin
 $ echo ${PATH}
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/baha/Alex-kku/workspace/node/bin
 $ mkdir scripts
 $ cat > scripts/activate<<EOF
 export PATH=\${PATH}:`pwd`/node/bin
@@ -54,7 +67,7 @@ $ source scripts/activate
 ```
 
 ```sh
-$ gem install gist
+$ sudo apt  install gist
 ```
 
 ```sh
@@ -119,18 +132,99 @@ $ gist REPORT.md
 
 ## Homework
 
-1. Скачайте библиотеку *boost* с помощью утилиты **wget**. Адрес для скачивания `https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz`.
-2. Разархивируйте скаченный файл в директорию `~/boost_1_69_0`
-3. Подсчитайте количество файлов в директории `~/boost_1_69_0` **не включая** вложенные директории.
-4. Подсчитайте количество файлов в директории `~/boost_1_69_0` **включая** вложенные директории.
-5. Подсчитайте количество заголовочных файлов, файлов с расширением `.cpp`, сколько остальных файлов (не заголовочных и не `.cpp`).
-6. Найдите полный пусть до файла `any.hpp` внутри библиотеки *boost*.
-7. Выведите в консоль все файлы, где упоминается последовательность `boost::asio`.
-8. Скомпилирутйе *boost*. Можно воспользоваться [инструкцией](https://www.boost.org/doc/libs/1_61_0/more/getting_started/unix-variants.html#or-build-custom-binaries) или [ссылкой](https://codeyarns.com/2017/01/24/how-to-build-boost-on-linux/).
-9. Перенесите все скомпилированные на предыдущем шаге статические библиотеки в директорию `~/boost-libs`.
-10. Подсчитайте сколько занимает дискового пространства каждый файл в этой директории.
-11. Найдите *топ10* самых "тяжёлых".
+[x] 1. Скачайте библиотеку *boost* с помощью утилиты **wget**. Адрес для скачивания `https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz`.
+[x] 2. Разархивируйте скаченный файл в директорию `~/boost_1_69_0`
+[x] 3. Подсчитайте количество файлов в директории `~/boost_1_69_0` **не включая** вложенные директории.
+[x] 4. Подсчитайте количество файлов в директории `~/boost_1_69_0` **включая** вложенные директории.
+[x] 5. Подсчитайте количество заголовочных файлов, файлов с расширением `.cpp`, сколько остальных файлов (не заголовочных и не `.cpp`). 
+[x] 6. Найдите полный пусть до файла `any.hpp` внутри библиотеки *boost*.
+[x] 7. Выведите в консоль все файлы, где упоминается последовательность `boost::asio`.
+[x] 8. Скомпилирутйе *boost*. Можно воспользоваться [инструкцией](https://www.boost.org/doc/libs/1_61_0/more/getting_started/unix-variants.html#or-build-custom-binaries) или [ссылкой](https://codeyarns.com/2017/01/24/how-to-build-boost-on-linux/).
+[x] 9. Перенесите все скомпилированные на предыдущем шаге статические библиотеки в директорию `~/boost-libs`.
+[x] 10. Подсчитайте сколько занимает дискового пространства каждый файл в этой директории.
+[x] 11. Найдите *топ10* самых "тяжёлых".
 
 ```
+# Homework
+1)
+$ wget https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz
+--2020-06-01 19:47:44--  https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz
+Распознаётся sourceforge.net (sourceforge.net)… 216.105.38.13
+Подключение к sourceforge.net (sourceforge.net)|216.105.38.13|:443... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа… 301 Moved Permanently
+Адрес: https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz/ [переход]
+--2020-06-01 19:47:45--  https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz/
+Подключение к sourceforge.net (sourceforge.net)|216.105.38.13|:443... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа… 302 Found
+Адрес: https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz/download [переход]
+--2020-06-01 19:47:46--  https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz/download
+Подключение к sourceforge.net (sourceforge.net)|216.105.38.13|:443... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа… 302 Found
+Адрес: https://downloads.sourceforge.net/project/boost/boost/1.69.0/boost_1_69_0.tar.gz?r=&ts=1591030067&use_mirror=netix [переход]
+--2020-06-01 19:47:47--  https://downloads.sourceforge.net/project/boost/boost/1.69.0/boost_1_69_0.tar.gz?r=&ts=1591030067&use_mirror=netix
+Распознаётся downloads.sourceforge.net (downloads.sourceforge.net)… 216.105.38.13
+Подключение к downloads.sourceforge.net (downloads.sourceforge.net)|216.105.38.13|:443... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа… 302 Found
+Адрес: https://netix.dl.sourceforge.net/project/boost/boost/1.69.0/boost_1_69_0.tar.gz [переход]
+--2020-06-01 19:47:48--  https://netix.dl.sourceforge.net/project/boost/boost/1.69.0/boost_1_69_0.tar.gz
+Распознаётся netix.dl.sourceforge.net (netix.dl.sourceforge.net)… 87.121.121.2
+Подключение к netix.dl.sourceforge.net (netix.dl.sourceforge.net)|87.121.121.2|:443... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа… 200 OK
+Длина: 111710205 (107M) [application/x-gzip]
+Сохранение в: «boost_1_69_0.tar.gz»
+
+boost_1_69_0.tar.gz 100%[===================>] 106,53M  1,16MB/s    за 76s     
+
+2020-06-01 19:49:04 (1,41 MB/s) - «boost_1_69_0.tar.gz» сохранён [111710205/111710205]
+
+2)
+$ tar -xf boost_1_69_0.tar.gz 
+$ cd boost_1_69_0 
+$ pwd
+/home/baha/boost_1_69_0
+
+3)
+$ ls -f . | wc -l
+20
+
+4)
+$ find . -type f | wc -l
+61191
+
+5)
+$ find . -type f -name '*.h' | wc -l
+296 # количество заголовочных файлов
+$ find . -type f -name '*.cpp' | wc -l
+13774 # количество файлов с расширением `.cpp`
+$ find . -type f '!' -name '*.cpp' -a '!' -name '*.cpp' | wc -l
+47417 # количествоостальных файлов
+
+6)
+$ find . -type f -name 'any.hpp' 
+./boost/hana/fwd/any.hpp
+./boost/hana/any.hpp
+./boost/any.hpp
+./boost/spirit/home/support/algorithm/any.hpp
+./boost/type_erasure/any.hpp
+./boost/fusion/algorithm/query/detail/any.hpp
+./boost/fusion/algorithm/query/any.hpp
+./boost/fusion/include/any.hpp
+./boost/proto/detail/any.hpp
+./boost/xpressive/detail/utility/any.hpp
+
+7)
+$ find . -type f -exec grep -iH "boost::asio" {} \; # выводятся все файлы,где упоминается последовательность boost::asio
+
+8)
+$ ./boost.sh
+$ ./b2 —prefix=<DEST>
+
+9)
+$ find . -name "*.so.*"
+$ find . -name "*.so.*" -exec mv {} ../boost-libs \;
+
+10)
+
+
 Copyright (c) 2015-2020 The ISC Authors
 ```
