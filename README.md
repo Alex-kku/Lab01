@@ -144,10 +144,8 @@ $ gist REPORT.md
 [x] 10. Подсчитайте сколько занимает дискового пространства каждый файл в этой директории.
 [x] 11. Найдите *топ10* самых "тяжёлых".
 
-```
-```
-
 # Homework
+```sh
 1)
 $ wget https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz
 --2020-06-01 19:47:44--  https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz
@@ -226,7 +224,44 @@ $ find . -name "*.so.*"
 $ find . -name "*.so.*" -exec mv {} ../boost-libs \;
 
 10)
+$ find . type -f -exec du -h {} +;
+100K ./libboost_stacktrace_basic.a
+2,4M ./libboost_wave.dylib
+7,8M ./libboost_math_tr1.a
+5,4M ./libboost_python27.a 164K ./libboost_thread.dylib 100K ./libboost_math_c99f.dylib
+480K ./libboost_$
+1,9M ./libboost_math_c99f.a
+1,8M ./libboost_math_c99l.a
+1,3M ./libboost_iostreams.a
+1,1M ./libboost_thread.a
+7,3M ./libboost_program_options.a
+188K ./libboost_iostreams.dylib
+300K ./libboost_coroutine.a
+276K ./libboost_timer.a
+412K ./libboost_wserialization.dylib 940K ./libboost_contract.a
+172K ./libboost_contract.dylib 892K ./libboost_numpy27.a
+740K ./libboost_type_erasure.a
+21M ./libboost_log_setup.a
+16K ./libboost_atomic.a
+208K ./libboost_random.a
+104K ./libboost_prg_exec_monitor.dylib 528K ./libboost_date_time.a
+648K ./libboost_graph.dylib
+828K ./libboost_locale.dylib
 
+11)
+$ find . type -f -exec du -h {} +|sort -rh | head -n 10
+28M ./libboost_wave.a
+21M ./libboost_log_setup.a
+20M ./libboost_log.a
+16M ./libboost_test_exec_monitor.a
+15M ./libboost_unit_test_framework.a
+9,1M ./libboost_locale.a
+8,9M ./libboost_regex.a
+8,1M ./libboost_math_tr1f.a
+7,8M ./libboost_math_tr1.a
+7,7M ./libboost_math_tr1l.a
 
+```
+```sh
 Copyright (c) 2015-2020 The ISC Authors
 ```
